@@ -12,8 +12,9 @@
   <ion-card *ngIf="quote" class="movie-card">
     <ion-card-header>Series: {{ quote.series }}</ion-card-header>
     <ion-card-content>
-     Quote:  {{ quote.quote }}
-     Author: {{ quote.author }} 
+    <ion-item> Quote:  {{ quote.quote }}</ion-item>
+     <ion-item> Author: {{ quote.author }} </ion-item>
+    
     </ion-card-content>
      </ion-card >
 </ion-content>

@@ -30,7 +30,10 @@ export class ApiService {
   getCount() {
     return this.http.get('https://www.breakingbadapi.com/api/death-count');
   }
-//   getCountChar(id) {
-//     return this.http.get(`https://www.breakingbadapi.com/api/death-count/${id}`);
-//   }
+   getDeaths() {
+    return this.http.get('https://www.breakingbadapi.com/api/deaths');
+  }
+  getDeath(id) {
+    return this.http.get(`https://www.breakingbadapi.com/api/deaths/${id}`);
+  }
 }

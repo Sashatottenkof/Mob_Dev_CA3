@@ -9,16 +9,18 @@ import { ApiService } from '../../services/api.service';
 })
 export class DeathCountPage implements OnInit {
 
-    deaths: Observable<Object>;
+    deathCounts: Observable<Object>;
+    deaths: Observable<any>;
     constructor(private router: Router, private api: ApiService){}
 
   ngOnInit() {
-        this.deaths = this.api.getCount();
+        this.deathCounts = this.api.getCount(); 
+         this.deaths = this.api.getDeaths();
     }
-    // openDetails(count) {
+    openDetails(death) {
 
-    //     let countId = count.count_id;
+        let deathId = death.death_id;
         
-    //     this.router.navigateByUrl(`/tabs/death-count/${countId}`);
-    // }
+        this.router.navigateByUrl(`/tabs/death-count/${deathId}`);
+    }
 }

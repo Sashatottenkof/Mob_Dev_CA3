@@ -27,6 +27,10 @@ const routes: Routes = [
                     {
                         path: '',
                         loadChildren: () => import('../death-count/death-count.module').then(m => m.DeathCountPageModule)
+                    },
+                     {
+                        path: ':id',
+                        loadChildren: () => import('../death-count-details/death-count-details.module').then(m => m.DeathCountDetailsPageModule)
                     }
                 ]
             },

@@ -6,19 +6,26 @@
 
 <ion-content class="ion-padding">
 <ion-list>
-<!-- <ion-item>
-{{death-count.deathCount}}
- </ion-item> -->
-    <ion-item button detail lines="inset" *ngFor="let death of deaths | async" (click)="openDetails(death)">
-      {{death.death}}
+
+    <!-- <ion-item button detail lines="inset" *ngFor="let death of deaths | async" (click)="openDetails(death)">
+      {{death-count}}
+  
+    </ion-item> -->
+    <ion-item  *ngFor="let deathCount of deathCounts | async">
+      Total Death-Count: {{deathCount.deathCount}}
   
     </ion-item>
-     <!-- <ion-item class="movie-info" lines="none">
      
-    
-    </ion-item> -->
+
   </ion-list>
- 
+  <ion-list>
+ <ion-item button detail lines="inset" *ngFor="let death of deaths | async" (click)="openDetails(death)">
+       {{death.death}}
+       
+     	<ion-icon name="skull-outline" slot="start"></ion-icon>
+
+    </ion-item>
+  </ion-list>
 </ion-content>
 
 <!-- ion-item button *ngFor="let item of (results | async)" [routerLink]="['/', 'movies', item.imdbID]"> -->
