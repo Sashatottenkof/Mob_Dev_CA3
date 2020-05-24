@@ -31,13 +31,13 @@ export class EpisodeDetailsPage implements OnInit {
     });
   }
  
-  favouriteEpisod() {
+  favouriteEpisode() {
     this.favouriteService.favouriteEpisode(this.episodeId).then(() => {
       this.isFavourite = true;
     });
   }
  
-  unfavouriteEpisod() {
+  unfavouriteEpisode() {
     this.favouriteService.unfavouriteEpisode(this.episodeId).then(() => {
       this.isFavourite = false;
     });
