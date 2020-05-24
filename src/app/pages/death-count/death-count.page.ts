@@ -9,11 +9,11 @@ import { ApiService } from '../../services/api.service';
 })
 export class DeathCountPage implements OnInit {
 
-    count: Observable<Object>;
+    deaths: Observable<Object>;
     constructor(private router: Router, private api: ApiService){}
 
   ngOnInit() {
-        this.count = this.api.getCount();
+        this.deaths = this.api.getCount();
     }
     // openDetails(count) {
 

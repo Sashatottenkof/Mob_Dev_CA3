@@ -16,16 +16,27 @@
 </ion-header>
 <ion-content padding>
   <ion-card *ngIf="character" class="movie-card">
-    <ion-card-header>Character</ion-card-header>
-    <ion-card-content>
-      {{ character.name }}
-    </ion-card-content>
+ 
     <ion-item class="movie-info" lines="none">
-      <ion-icon name="character" slot="start"></ion-icon>
+
+     <img [src]= "character.img">
+    </ion-item>
+     <ion-item class="movie-info" lines="none">
+     
+     Name: {{ character.name }}
+    </ion-item>
+    <ion-item class="movie-info" lines="none">
+     
       Nickname: {{ character.nickname }}
     </ion-item>
     <ion-item class="movie-info" lines="none">
       Occupation: {{ character.occupation }}
+    </ion-item>
+    <ion-item class="movie-info" lines="none">
+     Status: {{ character.status }}
+    </ion-item>
+    <ion-item class="movie-info" lines="none">
+     Actor: {{ character.portrayed}}
     </ion-item>
   </ion-card>
 </ion-content>

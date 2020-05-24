@@ -28,9 +28,9 @@ export class ApiService {
     return this.http.get(`https://www.breakingbadapi.com/api/quotes/${id}`);
   }
   getCount() {
-    return this.http.get('https://www.breakingbadapi.com/api/deaths');
+    return this.http.get('https://www.breakingbadapi.com/api/death-count');
   }
-  getCountChar(id) {
-    return this.http.get(`https://www.breakingbadapi.com/api/death-count/${id}`);
-  }
+//   getCountChar(id) {
+//     return this.http.get(`https://www.breakingbadapi.com/api/death-count/${id}`);
+//   }
 }
